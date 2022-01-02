@@ -10,6 +10,6 @@ DROP TABLE employees CASCADE CONSTRAINTS;
 CREATE TABLE employees (
     first_name VARCHAR2(25) PRIMARY KEY,
     last_name VARCHAR2(25),
-    department_id number(3) FOREIGN KEY departments(department_id)
+    department_id number(3) REFERENCES departments(department_id)
 );
 INSERT INTO employees (first_name, last_name, department_id) VALUES('Nag', 'Nutakki', 1);
