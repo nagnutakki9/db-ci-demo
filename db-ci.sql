@@ -1,6 +1,6 @@
 DROP TABLE departments CASCADE CONSTRAINTS;
 CREATE TABLE departments (
-    department_id NUMBER(3),
+    department_id NUMBER(3) PRIMARY KEY,
     department_description VARCHAR2(50)
 );
 INSERT INTO departments (department_id, department_description) VALUES(1, 'Sales Department');
