@@ -12,7 +12,7 @@ pipeline {
                         customTNSAdmin: '/var/lib/jenkins/wallet',
                         instance:'mydb_low',
                         scriptType:'file',
-                        script: 'db-ci-demo/test.sql',
+                        script: 'db-ci-demo/db-ci.sql',
                         scriptContent: ''
                     ]
                 )
