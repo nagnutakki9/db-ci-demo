@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+ 
+    stages {
+        stage('Run SQl Script') {
+            steps {
+                step (
+                    [
+                        $class: 'SQLPlusRunnerBuilder',
+                        credentialsId:'oracle',
+                        customOracleHome: '/lib/oracle/21/client64',
+                        customTNSAdmin: '/var/lib/jenkins/wallet',
+                        instance:'mydb_low',
+                        scriptType:'file',
+                        script: 'issue22/test.sql',
+                        scriptContent: ''
+                    ]
+                )
+            }
+        }
+    }
+}
