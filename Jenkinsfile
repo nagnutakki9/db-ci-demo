@@ -7,12 +7,12 @@ pipeline {
                 step (
                     [
                         $class: 'SQLPlusRunnerBuilder',
-                        credentialsId:'oracle',
-                        customOracleHome: '/opt/oracle',
-                        customTNSAdmin: '/opt/oracle/instantclient_19_8/network/admin/tnsnames.ora',
+                        credentialsId:'RDS Oracle DB',
+                        customOracleHome: '/opt/oracle/instantclient_19_8',
+                        customTNSAdmin: '/opt/oracle/instantclient_19_8/network/admin',
                         instance:'nag-oracledb',
                         scriptType:'file',
-                        script: 'db-ci-demo/db-ci.sql',
+                        script: 'db-ci.sql',
                         scriptContent: ''
                     ]
                 )
