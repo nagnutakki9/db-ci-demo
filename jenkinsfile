@@ -8,9 +8,9 @@ pipeline {
                     [
                         $class: 'SQLPlusRunnerBuilder',
                         credentialsId:'oracle',
-                        customOracleHome: '/lib/oracle/21/client64',
-                        customTNSAdmin: '/var/lib/jenkins/wallet',
-                        instance:'mydb_low',
+                        customOracleHome: '/opt/oracle',
+                        customTNSAdmin: '/opt/oracle/instantclient_19_8/network/admin/tnsnames.ora',
+                        instance:'nag-oracledb',
                         scriptType:'file',
                         script: 'db-ci-demo/db-ci.sql',
                         scriptContent: ''
