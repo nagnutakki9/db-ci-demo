@@ -7,7 +7,7 @@ pipeline {
                 step (
                     [
                         $class: 'SQLPlusRunnerBuilder',
-                        credentialsId:'RDS Oracle DB',
+                        credentialsId:'nag-oracledb',
                         customOracleHome: '/opt/oracle/instantclient_19_8',
                         customTNSAdmin: '/opt/oracle/instantclient_19_8/network/admin',
                         instance:'nag-oracledb',
